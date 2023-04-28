@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <style>
+      *{
+        font-family: 'Mona Sans';
+        margin: 0;
+        padding: 0;
+      }
+
+      .topbar{
+        background-color: rgb(0, 0, 0);
+        height:60px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #search-in-topbar{
+        border : 1px solid rgb(112, 110, 110);
+        border-radius: 6px;
+        height: 30px;       
+        width: 270px;
+        background-color: rgb(31, 31, 31);
+        font-size: 16px;
+        margin-right:10px;
+      }
+
+      #mainImg{
+        margin-top:-5px;
+        width: 42px;
+        height: 42px;
+      }
+      img:hover{
+        filter : brightness(80%);
+      }
+      ul> li{
+        list-style: none;
+      }
+
+      ul{
+      display: flex;
+      padding: 15px;
+      }
+
+      header > label > ul > li > a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        margin: 10px;
+        font-size: 13px;
+      }
+
+      a:hover{
+        color: rgba(117, 113, 113, 0.741);
+      }
+      #right-topbar{
+        color:white;
+        margin:15px;
+      }
+      div.left {
+        float: left;
+        background: #fefbfd;
+        padding: 27px;
+      }
+
+      .newRepository {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .button {
+        padding: 5px;
+        font-size: 15px;
+        color: aliceblue;
+        background-color: rgb(97, 197, 97);
+        border-radius: 5px;
+        border: none;
+      }
+
+      #search {
+        border: rgb(186, 186, 186);
+        border-style: solid;
+        border-width: 1px;
+        background: #f1eeef;
+        padding: 7px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+
+      #name {
+        display: flex;
+        padding: 10px;
+      }
+
+      #nickName{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+
+      #nickNameIcon {
+        border-radius: 60%;
+      }
+
+      #nickName:hover {
+        color: rgb(0, 0, 0);
+        text-decoration: underline 1px solid  ;
+      }
+
+      #activity {
+        padding: 3px;
+        margin: 5px;
+      }
+
+      .explanation {
+        border: dashed #c6bbbb;
+        height: 70px;
+        width: 290px;
+        border-radius: 10px;
+      }
+      
+      #block {
+        margin: 18px;
+        font-size: 12px;
+        text-align: left;
+      }
+      #bell{
+        width: 30px;
+      }
+      #plus{
+        width: 20px;
+        margin-bottom: 8px;
+      }
+      footer{
+        display: flex;  
+      }
+      footer > label > ul{
+        display: flex;
+      }
+      footer > label > ul > li{
+        display: inline-block;
+      }
+      footer > label > ul > li > a{
+        color: rgb(53, 53, 53);
+        text-decoration: none;
+      }
+
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub</title>
+  </head>
+  <body>
+    <header>
+      <label class="topbar">
+          <ul id="left-toptopbar">
+            <li><a href="https://github.com/"><img src="https://icones.pro/wp-content/uploads/2021/06/symbole-github-violet.png" id="mainImg" alt=""/></a></li>
+              <li><input type="search" id="search-in-topbar"placeholder="  Search or jump to ..." /></li>
+              <li><a href=""><strong>Pull request</strong></a></li>
+              <li><a href=""><strong>Issues</strong></a></li>
+              <li><a href=""><strong>CodeSpaces</strong></a></li>
+              <li><a href=""><strong>Marketplace</strong></a></li>
+              <li><a href=""><strong>Explore</strong></a></li>
+            </ul>
+            <div id="right-topbar">
+            <a href="#"><img src="./img/wing.png" id="bell"alt=""/></a>
+            <a href="#"><img src="./img/plus.png" id="plus"alt=""/></a>
+            <ul id="new-things">
+              <li>New repository</li>
+              <li>Import repository</li>
+              <li>New codespace</li>
+              <li>New gist</li>
+              <li>New organization</li>
+              <li>New project</li>
+            </ul>
+            img</div>
+            
+      </label>
+    </header>
+    <div class="left">
+      <div class="newRepository">
+        <span class="repository">Top Repositories</span>
+        <span class="click"></span><button class="button" type="button" onclick="location.href= 'https://github.com/new'">
+            <img src="img/free-icon-github-sign-25657.png" width="15px" height="15px" />New</button></span>
+      </div>
+      <input
+        id="search"
+        size="37"
+        type="text"
+        placeholder=" Find a repository..."
+      />
+      <div
+        id="name"
+        onclick="location.href= 'https://github.com/kimjin9822/-'"
+      >
+        <img
+          id="nickNameIcon"
+          src="img\94292515.png"
+          width="20px"
+          height="20px"
+        />
+        <a id="nickName" href="https://github.com/">nickName</a>
+      </div>
+      <div id="activity">Recent activity</div>
+      <div class="explanation">
+        <p id="block">
+          When you take actions across GitHub, we’ll provide links to that
+          activity here.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <img>
+        &copy; 2023 GitHub,&nbsp;Inc.
+      </div>
+      <label>
+        <ul>
+          <li><a href="https://github.com/">Blog</a></li>
+          <li><a href="https://github.com/about">About</a></li>
+          <li><a href="https://www.thegithubshop.com/">Shop</a></li>
+          <li><a href="https://support.github.com/?tags=dotcom-footer">Contact GitHub</a></li>
+          <li><a href="https://github.com/pricing">Pricing</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://docs.github.com/ko">API</a></li>
+          <li><a href="https://github.com/services/">Training</a></li>
+          <li><a href="https://www.githubstatus.com/">Status</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://docs.github.com/ko/site-policy/github-terms/github-terms-of-service">Terms</a></li>
+          <li><a href="https://docs.github.com/ko/site-policy/privacy-policies/github-privacy-statement">Privacy</a></li>
+          <li><a href="https://docs.github.com/ko">Docs</a></li>
+        </ul>
+      </label>
+  </footer>
+  </body>
+</html>

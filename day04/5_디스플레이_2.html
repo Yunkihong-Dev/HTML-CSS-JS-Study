@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      div {
+        background-color: brown;
+        color: white;
+        margin: 16px;
+      }
+      .display {
+        display: none;
+      }
+      .visibility {
+        visibility: hidden;
+      }
+      .opacity {
+        opacity: 0;
+      }
+      button {
+        padding: 16px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button:hover {
+        color: brown;
+        opacity: 0.7;
+      }
+      button:disabled {
+        background-color: aliceblue;
+        color: #333;
+        opacity: 0.7;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디스플레이_2</title>
+  </head>
+  <body>
+    <div>
+      <p>display: none속성은 사용자 화면에서 사라집니다.</p>
+      <p class="display">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
+        quidem rerum quis in quia pariatur maxime mollitia ea sit recusandae eum
+        architecto temporibus, vitae corporis iusto tempore consequatur quaerat
+        odit!
+      </p>
+    </div>
+    <div>
+      <p>visibility : hidden 속성은 사용자 화면에서 사라집니다.</p>
+      <p class="visibility">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
+        quidem rerum quis in quia pariatur maxime mollitia ea sit recusandae eum
+        architecto temporibus, vitae corporis iusto tempore consequatur quaerat
+        odit!
+      </p>
+    </div>
+    <div>
+      <p>opacity : 0속성은 사용자 화면에서 사라집니다.</p>
+      <p class="opacity">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
+        quidem rerum quis in quia pariatur maxime mollitia ea sit recusandae eum
+        architecto temporibus, vitae corporis iusto tempore consequatur quaerat
+        odit!
+      </p>
+    </div>
+    <button>버튼</button>
+  </body>
+</html>

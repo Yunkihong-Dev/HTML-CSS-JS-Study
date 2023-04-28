@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>id/ class 선택자</title>
+    <style>
+      .small-font {
+        font-size: 12px;
+      }
+
+      .big-font {
+        font-size: 24px;
+      }
+      #red-text {
+        color: red;
+      }
+      .red-text {
+        color: red;
+      }
+
+      .font-bold {
+        font-weight: bold;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <main>
+      <h2>ID/CLASS 선택자</h2>
+      <p class="small-font">
+        Lorem ipsum dolor sit <span id="red-text" class="font-bold">amet</span>,
+        consectetur adipisicing elit. Accusantium modi quod vel ratione odit
+        nulla nobis
+
+        <span class="red-text big-font">voluptate</span> consectetur
+        reprehenderit, numquam sunt eos ex! Nostrum quae, eum autem vero
+        voluptatem error?
+      </p>
+      <p class="big-font">
+        Lorem ipsum dolor sit <span>amet consectetur</span> adipisicing elit.
+        Deserunt doloribus hic iusto natus beatae dolor aliquam
+        <span class="red-text font-bold">laudantium</span>, nam eius provident
+        ipsam, alias enim quasi nulla autem et eveniet. Possimus, neque.
+      </p>
+    </main>
+    <footer>FOOTER</footer>
+  </body>
+</html>

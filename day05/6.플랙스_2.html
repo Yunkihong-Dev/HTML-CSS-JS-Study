@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스_2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f1f1f1;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flex-align-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .maindiv {
+        width: 500px;
+        padding: 16px;
+        border: 3px solid rgb(192, 192, 191);
+        margin: auto;
+      }
+
+      header {
+        height: 100px;
+        color: rgb(120, 148, 44);
+        text-align: center;
+        padding: 50px;
+        margin: 50px;
+        font-size: 40px;
+      }
+
+      footer {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+      }
+      input::placeholder {
+        text-align: center;
+      }
+      input {
+        width: 400px;
+        height: 40px;
+        border: 1px solid #b6b3b3;
+        background-color: white;
+        padding: 10px;
+      }
+      #sign_in {
+        margin: 30px;
+        width: 400px;
+        height: 50px;
+        border: none;
+        background-color: #169782;
+        color: white;
+        font-size: 20px;
+      }
+      #input_up_text {
+        padding: 10px;
+      }
+      #inside_footer {
+        font-size: 12px;
+        color: #9d9a9a;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        과제
+
+        해당 화면이 사용자 화면에 맞도록 한 화면에 가득차야함
+        footer는 항상 맨아래 위치
+
+        회원가입 요소는 main 요소의 가운데에 위치
+        회원가입 요소 안에 있는 form 데이터 (input 역시)
+        가운데 정렬 되어있어야한다
+
+        form 요소의 크기는 280px이며
+        form 요소 내부에 있는 input들 역시 수직,수평 가운데 정렬
+    -->
+    <header><strong>DAUVER</strong></header>
+    <main>
+      <div class="maindiv">
+        <h2>Sign_in</h2>
+        <form class="flex-align-center">
+          <p id="input_up_text">ID</p>
+          <p><input type="text" placeholder="@dauver.com" id="input_id" /></p>
+          <p id="input_up_text">PASSWORD</p>
+          <p>
+            <input
+              type="password"
+              placeholder="8 LETTERS INCLUDE ENGLISH AND NUMBER "
+              id="input_password"
+            />
+          </p>
+          <p id="input_up_text">TEL</p>
+          <p>
+            <input type="tel" id="input_tel" placeholder="INSERT WITHOUT - " />
+          </p>
+          <p><button id="sign_in">SIGN IN</button></p>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div id="inside_footer">
+        <a>이용약과 |</a>
+        <a><strong> 개인정보처리 |</strong></a>
+        <a> 무책임과 법적고지 |</a>
+        <a> 회원정보 빼돌리기</a>
+      </div>
+      <div>&copy;DAUVER corp.</div>
+    </footer>
+  </body>
+</html>

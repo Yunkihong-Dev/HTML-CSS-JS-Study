@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이드 메뉴</title>
+    <style>
+      header {
+        width: 100%;
+        height: 100px;
+      }
+
+      #menu {
+        width: 980px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: darkorange;
+        position: relative;
+      }
+
+      #hide-menu {
+        background-color: orange;
+        transition: height 0.5s ease-in-out;
+        width: 980px;
+        height: 100px;
+        position: absolute;
+        top: 100px;
+      }
+      #menu:hover > #hide-menu {
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="menu">
+        <div id="hide-menu"></div>
+      </div>
+    </header>
+    <script defer="defer">
+      const $header = document.querySelector("header");
+      const $menu = document.querySelector("#menu");
+      const $hide_menu = document.querySelector("#hide-menu");
+
+      $menu.addEventListener("mouseover", () => {
+        $hide_menu.style.height = "300px";
+      });
+      $header.addEventListener("mouseleave", () => {
+        $hide_menu.style.height = "0px";
+      });
+    </script>
+  </body>
+</html>

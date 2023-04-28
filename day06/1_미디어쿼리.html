@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미디어쿼리</title>
+    <style>
+      :root {
+        --primary-color: #000;
+        --secondary-color: #fff;
+        --font-color: #fff;
+        --font-subColor: #999;
+
+        /* 팔레트 */
+        --gray100: #e9e9e9;
+        --gray200: #d9d9d9;
+        --gray300: #656565;
+
+        /* 폰트 크기 */
+        --small-font: 12px;
+        --medium-font: 16px;
+        --big-font: 24px;
+      }
+
+      header {
+        width: 100%;
+        height: 48px;
+        background-color: var(--primary-color);
+        color: var(--font-color);
+        font-size: var(--big-font);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        display: flex;
+        height: 100vh;
+      }
+      main > aside {
+        background-color: red;
+        height: 100%;
+        width: 480px;
+      }
+      footer {
+        width: 100%;
+        padding: 32px;
+        background-color: var(--primary-color);
+        font-size: var(--font-color);
+      }
+
+      @media screen and (max-width: 1280px) {
+        main > aside {
+          width: 280px;
+        }
+        footer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        header {
+          font-size: var(--medium-font);
+          text-align: center;
+        }
+        main > aside {
+          display: none;
+        }
+      }
+      /* 
+      mobile : 345px ~ 767px
+      tablet:  768px ~ 1279px
+      desktop: 1280px ~
+       */
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <main>
+      <aside></aside>
+      <section></section>
+    </main>
+    <footer>Corp @. HYK</footer>
+  </body>
+</html>

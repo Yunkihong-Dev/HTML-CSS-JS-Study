@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      [type="text"] {
+        color: blue;
+        text-align: center;
+      }
+      [type="text"]::placeholder {
+        color: red;
+      }
+      [type="text"]:focus {
+        background-color: black;
+      }
+      a {
+        text-align: none;
+      }
+      [href]:visited {
+        color: green;
+      }
+      [href]:hover {
+        color: violet;
+      }
+      ul > li {
+        list-style-type: none; /*리스트의 점 삭제*/
+      }
+
+      ul > li::after {
+        content: "|";
+      }
+
+      ul > li:last-of-type::after {
+        content: "";
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소선택자</title>
+  </head>
+  <body>
+    <h2>가상요소선택자</h2>
+    <input type="text" placeholder="택스트를 입력해주세요" />
+    <a href="https://www.naver.com"
+      >네이버로<br />
+      이동</a
+    >
+    <ul>
+      <li>로그인</li>
+      <li>회원가입</li>
+    </ul>
+  </body>
+</html>

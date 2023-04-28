@@ -1,0 +1,9 @@
+p > a {
+  color: red;
+}
+
+header > p > a {
+  color: blue;
+}
+header > .nav > p {
+}

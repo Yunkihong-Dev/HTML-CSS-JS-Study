@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 300px;
+        height: 200px;
+        margin: 16px;
+        border: 1px solid #000;
+        transition: transform 1.5s ease-in-out;
+      }
+      div > img {
+        width: 200px;
+      }
+      #scale:hover {
+        transform: scale(1.5);
+        /* transform: scale(0.5); */
+        /* transform: scaleX(-1);
+        transform: scaleY(-1); */
+      }
+      #translate:hover {
+        transform: translateX(50%);
+        transform: translate(-50%, -50%);
+      }
+      #rotate:hover {
+        transform: rotate(270deg);
+        transform: rotateY(90deg);
+        transition: transform 1.5s ease-in-out;
+        transform: perspective(50px) rotateX(180deg) rotateY(180deg);
+      }
+      #modal-background {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+      }
+      #modal {
+        z-index: 100;
+        position: absolute;
+        background-color: rgb(179, 32, 32);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>트랜스폼</title>
+  </head>
+  <body>
+    <div id="modal-background"></div>
+    <div id="modal">
+    <div id="scale"><img src="./img/jicsaw.jfif" /></div>
+    <div id="translate"></div>
+    <div id="rotate">rotate</div>
+  </body>
+</html>

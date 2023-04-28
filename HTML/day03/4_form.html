@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+</head>
+<body>
+    <form action="#" method="GET">
+        <p>아이디 : <input type ="email" name="" required/></p>
+        <!--127.0.0.1:5500/#?name명=input의 값-->
+        <!--127.0.0.1:5500/#?user_email=email-->
+
+        <p>비밀번호 : <input type="number" name="user_password" required/></p>
+        <!-- button 요소의 기본 type 속성값은 submit-->
+        <!-- 따라서 form 안에 있는 button요소는 모두 submit(제출)-->
+        <!-- 그러나, 혹 내가 제출을 원하지 않는 버튼이 있다면-->
+        <button>로그인</button>
+        <button type="button">제출 안함</button>
+        <button type="reset">초기화</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+</head>
+<body>
+    <div>
+        <!--hobby-->
+        <div> 
+            취미: 
+        <select>
+            <option value = "0">농구</option>
+            <option value = "1">자전거</option>
+            <option value = "2">풋살</option>
+        </select>
+        </div>
+        <!--gender-->
+        <input type="radio" name="gender" value ="0" id="female"/>
+        <label for="female">여성</label>
+        <input type="radio" name="gender" value ="1"/>남성
+        <input type="radio" name="gender" value ="0"/>비공개
+        <!--family-->
+        <div>
+            <!--checkbox는 다중선택이 가능하며
+            조회횄을 시 해당 checkbox가 선택되어있는
+            값을 모두 불러옴(name으로 묶여있다면 하나만 선택가능)-->
+            가족관계 :
+            <input type="checkbox" value ="0"> 본인
+            <input type="checkbox" value ="1"> 부모
+            <input type="checkbox" value ="2"> 형제
+        <div></div>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="list"></div>
+    <script>
+        const BACKEND_URL = 'https://jsonplaceholder.typicode.com/';
+        fetch(BACKEND_URL,{
+            method:"GET"
+        }).then((res)=>res.json())
+            .then((res)=>{
+                console.log(res);
+                const $list= document.querySelector('.list');
+                $list.innerHTML = res.map((post)=> `<div class="postbox">${post.body}</div>`).join('');
+        })
+
+        const
+
+
+    </script>
+</body>
+</html>

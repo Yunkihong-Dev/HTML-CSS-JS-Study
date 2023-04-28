@@ -1,0 +1,169 @@
+DOM
+    (Document Object Model) 문서 객체 모델
+
+    (Aplication Programing Interface) API
+        응용 프로그램 사이에서 통신에 사용되는 언어와 메세지.
+
+------------------------------------------------------------
+
+
+DOM selector
+
+    1. document.getElementById()
+    2. document.getElementsByClassName()
+        - HttpCollection
+    3. document.getElementsByTagName()
+        - HttpCollection
+    4. document.getElementsByName()
+         - NodeList
+
+    5. document.querySelector();
+    6. document.querySelectorAll();
+         - NodeList
+    * NodeList vs HttpCollection
+        - NodeList
+
+    HttpCollection : live , 유사 배열 객체
+    NodeList : none-live , 유사 배열 객체
+
+        ex) 
+            const $els = document.getElementsByClassName('red')
+
+            for(let i=0;i<$els.length;i++){
+            $els[i].className = 'blue'
+    }
+
+    *유사 배열 객체
+    
+    HttpCollection,NodeList를 배열로 사용하고싶다.
+
+    (1) Array.from(els)
+    (2) const arr= [...els]
+    (3) HttpCollection.prototype.forEach = Array.prototype.forEach(권장x)
+
+    ----------------------------------------------------------------------------
+
+        DomAPI를 왜쓸까?
+
+            사용지의 행위에 따라
+            HTML요소의 프로퍼티를 바꾸기위해서 사용함.
+
+            =>HTML,CSS 정적인 페이지 => 동적으로 만들기 위해서.
+
+    -------------------------------------------------------
+
+        addEventListener
+
+        자바스크립트에서 가장 권장되는 이벤트 등록 방식
+                                            ------ 사용자의 형위
+
+        
+        ex)
+        요소 || window.addEventListener("이벤트명",콜백함수,options)
+
+        자주 사용하는 이벤트명
+
+        click : 요소를 클릭했을 때
+
+        mouseover : 요소에 마우스를 올렸을 때
+        mouseleave : 요소에서 마우스가 떠났을 때
+        mousedown : 요소를 누르고 마우스를 아직 때기 이전인 상태
+        mouseup : 요소를 누르고 마우스를 땐 상태
+
+        mousewheel : 마우스 휠이 이동됐을 때
+        mousemove : 마우스가 움직일 때 마다
+
+        focus : 폼 요소의 입력 요소가 활성화 되어있을 때
+        blur : 포커스에서 벗어났을 때
+        change : 폼 요소의 값이 변경됐을 때
+
+        keypress : 키를 처음 누른 순간
+        keyup : 키를 눌렀다가 땐 순간
+        keydown : 키를 누르고 뜨기 이전일 때
+
+        window,document
+
+        load - 웹 페이지가 로드되었을 때
+        resize - 웹 페이지의 사이즈가 조정되었을 때
+        scroll -
+        unloads -
+
+-- 페이지가 리사이즈 되었을 때 변수에 값을 재할당(돔요소가 전역변수로 활용되었을 때 동적으로 요소에 접근)
+let $dom = document,getElementById("seongyong").width
+window.addEventListener('resize'()=>{
+    $dom = document.getElementById("seongyong").width
+})
+        
+-- 특정 이벤트가 일어났을 때 특정요소의 길이를 선언()
+document.getElementById("button").addEventListener("click",() =>{
+    let $dom = document.getElementById("seongyong").width
+}) 
+
+------------------------------------------------------------------
+classList
+
+    해당 요소가 가지고 있는 클래스의 목록을 나타내는 DOM properties
+
+    <div class="seoungyong on add flex"/>
+
+    document.getElementsByClassName("seongyong").classList
+    // seongyong on add flex
+
+    classList.contain("on")
+        해당 클래스가 있는지 없는지 여부를 판단하여 boolean 형태로 변환
+
+    calssList.add("class")
+        해당 요소에 인자로 전달된 클래스를 DOM에 추가
+
+    classList.remove("class")
+        해당 요소에 인자로 전달된 클래스를 DOM에 추가
+
+    ex)
+        <div class="tab" />
+        <div class="tab" />
+        <div class="tab on" />
+        <div class="tab" />
+        <div class="tab" />
+
+        const tabs = document.querySelectorAll(".tab")
+        
+        tabs.forEach((el)=>{
+            el.addEventListener('click', (e) =>{
+                const selectorTab = e.target;
+                selectorTab.classList.add('on')
+            })
+        })
+
+        ** this
+
+        addEventListener의 this는 동적으로 바인딩(결정)되며
+        => 누가 this를 불렀는가에 따라서 값이 바뀐다.
+
+        addEventListener의 this는 이벤트 자체를 불러옵니다.
+        따라서 이벤트가 일어난 대상을 찾기 위해선 e.target을 통해 명확한 요소를 불러올 수 있음.
+
+        -------------------------------------------------------------------------------------------
+
+        attribute(속성)
+            setAttribute("속성명",속성값) - 설정
+            getAttribute("속성명") - 속성값의 조회
+            removeAttribute("속성명") - 속성값 삭제
+        --------------------------------------------------------------------------------------------
+
+        캡처링, 버블링
+
+        버블링
+            한 요소에 이벤트가 발생ㄷ괴면, 이어서 부모 요소의 핸들러가 동작
+            => 하위 요소의 이벤트가 부모 요소의 이벤트로 전파
+
+        캡처링
+            버블링과 반대, 부모 요소를 클릭했을 때 하위 요소가 이벤트로 전파되는 것,
+            캡처링의 기본 옵션은 false
+            addEventListener의 option인자로 t/f를 변동가능
+
+            3)
+            el.addEventListener('click',function(){},true);
+
+
+
+        이벤트 전파 방지

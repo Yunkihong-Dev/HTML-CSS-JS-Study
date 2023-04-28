@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #container{
+        width: 100%;
+    }
+    .register{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .title{
+        margin: 0 auto;
+    }
+    .crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+    }
+    .crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+#numincrumb{
+    font-style: normal;
+}
+
+.crumb {
+    display: inline-block;
+}
+</style>
+<meta charset="UTF-8">
+<title>폼나는 폼 태그</title>
+</head>
+<body>
+    <div id="container">
+	<div class="register">
+        <div class="box1">
+        <h3>회원가입</h3>
+			<nav class="crumbs">
+			<ol>
+            <li class="crumb"><a ><em id="numincrumb">01</em>정보입력 및 약관동의 ></li>
+			<li class="crumb"><em id="numincrumb">02</em>가입완료</li>		
+            </ol>
+            </nav>
+        </div>
+		<form>
+		<div>
+            <div><h4>기본정보</h4></div>
+            <div>*필수입력사항</div>
+		</div>
+		<table>
+		<tr>
+            <th>아이디(이메일)</th>
+            <td><div><input type="text" name="id"><div>※ 수신가능한 이메일 주소로 입력해주세요.</div></div></td>
+		</tr>
+		<tr>		
+            <th>비밀번호</th>
+            <td><input type="password" name="password"></td>
+		</tr>
+		<tr>		
+		<th>비밀번호 확인</th>
+		<td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <td><input type="text" name="userName"></td>
+        </tr>
+        <tr>
+            <th>휴대폰번호</th>
+            <td><input type="text" name="userPhone" placeholder="- 없이 입력하세요"></td>
+        </tr>
+        <tr>
+            <th>전화번호</th>
+            <td><input type="text" name="userHousePhone" placeholder="- 없이 입력하세요"></td>
+        </tr>
+        <tr>
+		<th>주소</th>
+		<td><div><input type="text" name="address"readonly="readonly"><button>우편번호검색</button></div>
+            <input type="text" name="address" readonly="readonly">
+            <input type="text" name="address">
+            </td>
+		</tr>
+		</table>
+		<div>
+            <div>부가 정보</div>
+            <div>필수입력사항</div>
+        </div>
+        <table>
+            <tr>
+                <th>성별</th>
+                <td><label><input type="radio" name="gender">남자</label></td>
+                <td><label><input type="radio" name="gender">여자</label></td>
+            </tr>
+            <tr>
+                <th>생일</th>
+                <td>
+                    <select>
+                        <option>년</option>
+                        <option>1900</option>
+                        <option>1901</option>
+                        <option>1902</option>
+                        <option>1903</option>
+                        <option>1904</option>
+                        <option>1904</option>
+                        <option>1905</option>
+                        <option>1906</option>
+                    </select>
+                    <select>
+                        <option>월</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select>
+                        <option>일</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>휴면회원 방지기간</th>
+                <td><label><input type="radio" name="expireYear">1년</label>
+                    <label><input type="radio" name="expireYear">3년</label>
+                    <label><input type="radio" name="expireYear">5년</label>
+                    <label><input type="radio" name="expireYear">탈퇴시까지-평생회원</label></td>
+            </tr>
+            <div>
+                <h2>약관동의</h2>
+                <div>   
+                    <label>
+                        <input type="checkbox" name="agree">카포스토어의 모든 약관을 확인하고 전체 동의합니다. (전체동의, 선택항목도 포함됩니다.)
+                    </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="agree">[필수] 이용약관</label>
+                    <label><input type="checkbox" name="agree">[필수] 개인정보 수집 및 이용</label>
+                    <label><input type="checkbox" name="agree">[선택] 개인정보 수집 및 이용</label>
+                    <label><input type="checkbox" name="agree">선택] SMS 수신을 동의하십니까?</label>
+                    <label><input type="checkbox" name="agree">[선택] 이메일 수신을 동의하십니까?</label>
+                </div>
+            
+            </div>
+        </table>
+        
+        <div>
+        <input type="submit"value="취소">
+        <input type="submit" value="회원가입">
+        </div>
+		</form>
+	</div>
+</div>
+</body>
+</html> 
